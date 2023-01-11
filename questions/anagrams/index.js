@@ -9,8 +9,45 @@
  * anagrams('frontend', 'simplified') === false
  */
 
+// USING CHAR MAPS
+// const anagrams = (strA, strB) => {
+//     const charMapA = buildCharMap(strA);
+//     const charMapB = buildCharMap(strB);
+
+//     if (charMapA.size !== charMapB.size) {
+//         return false;
+//     }
+
+// for (const [charA, countA] of charMapA) {
+//     if (charMapA.get(charA) !== countA) {
+//         return false;
+//     }
+// }
+
+// return true;
+// };
+
+// const buildCharMap = (str) => {
+//     const charMap = new Map();
+
+//     for (const char of removeSpacesAndLowerCase(str)) {
+//         charMapB.set(char, charMap.get(char) + 1 || 1);
+//     }
+// }
+
+// const removeSpacesAndLowerCase = (str) => {
+//     return str.toLowerCase().replaceAll(" ", "")
+// }
+
+// module.exports = anagrams;
+
+//top tech method
 const anagrams = (strA, strB) => {
-  
+    return cleanString(strA) === cleanString(strB);
+};
+
+const cleanString = (str) => {
+    return  str.toLowerCase().replaceAll(" ", "").split("").sort().join("")
 }
 
-module.exports = anagrams;
+    module.exports = anagrams;
