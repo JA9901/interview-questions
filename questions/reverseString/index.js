@@ -13,6 +13,8 @@
 // a = 'vaD', c = 'i' => a = 'i' + 'vaD' = 'ivaD'
 // a = 'ivaD', c = 'd' => a = 'd' + 'ivaD' = 'divaD'
 
+
+// TOP TECH
 const reverseString = (str) => {
   return str
     .split("")
